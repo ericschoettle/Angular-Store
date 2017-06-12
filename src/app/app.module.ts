@@ -5,16 +5,22 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { routing } from './app.routing';
+import { AboutComponent } from './about/about.component';
+import { MarketplaceComponent } from './marketplace/marketplace.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    AboutComponent,
+    MarketplaceComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     // HttpModule
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
