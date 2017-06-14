@@ -22,6 +22,13 @@ export class AlbumService {
     return this.database.object('albums/' + albumId);
   }
 
+  updateAlbum(localUpdatedAlbum) {
+    var albumInFirebase = this.getAlbumById(localUpdatedAlbum.$key);
+    albumInFirebase.update({title: localUpdatedAlbum.title,
+                            artist: localUpdatedAlbum.artist,
+                            description: localUpdatedAlbum.descriptio});
+  }
+  
   goToDetailPage(clickedAlbum: Album) {
     // this.router.navigate(['albums', clickedAlbum.id]);
   };
