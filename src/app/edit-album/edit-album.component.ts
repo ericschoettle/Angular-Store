@@ -18,4 +18,8 @@ export class EditAlbumComponent implements OnInit {
   sendAlbumUpdateToFirebase(selectedAlbum) {
     this.albumService.updateAlbum(selectedAlbum);
   }
+
+  deleteAlbum(selectedAlbum) {
+    this.albumService.deleteAlbum(selectedAlbum)
+  }
 }

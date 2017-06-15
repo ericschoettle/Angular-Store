@@ -32,4 +32,9 @@ export class AlbumService {
   goToDetailPage(clickedAlbum: Album) {
     // this.router.navigate(['albums', clickedAlbum.id]);
   };
+
+  deleteAlbum(album) {
+    var albumInFirebase = this.getAlbumById(album.$key);
+    albumInFirebase.remove();
+  }
 }
